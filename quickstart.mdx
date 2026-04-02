@@ -1,55 +1,57 @@
 ---
 title: Quickstart
-description: Get a cmdocs documentation site running in under 2 minutes.
+description: Get up and running in minutes
 ---
 
 # Quickstart
 
-Get your first documentation site up and running with three commands.
+## Installation
 
-## Prerequisites
+Install cmdocs globally:
 
-- [Node.js](https://nodejs.org) 18+ or [Bun](https://bun.sh) installed
-- A terminal
+```bash
+npm install -g cmdocs
+```
 
-## Create Your Project
+## Create a new project
 
-<Steps>
-  <Step>
-    **Initialize a new project**
+```bash
+cmdocs init my-docs
+cd my-docs
+```
 
-    ```bash
-    npx cmdocs init my-docs
-    ```
+## Start developing
 
-    This creates a `my-docs/` directory with:
-    - `docs.json` — Site configuration
-    - MDX files — Example documentation pages
-    - `public/` — Static assets (favicon, images)
-  </Step>
-  <Step>
-    **Start the dev server**
+```bash
+cmdocs dev
+```
 
-    ```bash
-    cd my-docs
-    npx cmdocs dev
-    ```
+Open [http://localhost:3000/docs](http://localhost:3000/docs) to see your docs.
 
-    Open [http://localhost:3000](http://localhost:3000) in your browser. You should see your documentation site with hot-reload enabled.
-  </Step>
-  <Step>
-    **Edit your content**
+## Build for production
 
-    Open `index.mdx` in your editor and make a change. The browser will update automatically.
+```bash
+cmdocs build
+```
 
-    Edit `docs.json` to customize your site name, colors, and navigation structure.
-  </Step>
-</Steps>
+The static site will be generated in the `out/` directory.
 
-## What's Next?
+## Project Structure
 
-<Cards>
-  <Card title="Configuration" description="Learn about docs.json and all available options." href="/docs/configuration/docs-json" />
-  <Card title="Writing Content" description="Learn MDX basics and available components." href="/docs/content/mdx-basics" />
-  <Card title="Deployment" description="Deploy your site to production." href="/docs/deployment/overview" />
-</Cards>
+```
+my-docs/
+├── docs.json          # Configuration
+├── index.mdx          # Home page
+├── quickstart.mdx     # This page
+├── guides/
+│   ├── writing-content.mdx
+│   └── components.mdx
+└── public/
+    └── favicon.svg
+```
+
+## Next Steps
+
+- Edit `docs.json` to customize your site name, theme, and navigation
+- Add new pages by creating `.mdx` files
+- Use Fumadocs components like `Callout`, `Card`, `Tabs`, and more

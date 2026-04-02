@@ -1,0 +1,83 @@
+---
+title: Components
+description: Explore built-in Fumadocs components
+---
+
+# Components
+
+cmdocs uses [Fumadocs](https://fumadocs.dev) built-in components. The CLI automatically injects the necessary imports when it detects component usage in your MDX files.
+
+## Callout
+
+Use callouts to highlight important information:
+
+<Callout type="info">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warn">
+  This is a warning callout.
+</Callout>
+
+<Callout type="error">
+  This is an error callout.
+</Callout>
+
+## Cards
+
+<Cards>
+  <Card title="Getting Started" href="/docs">
+    Learn the basics of cmdocs.
+  </Card>
+  <Card title="Quickstart" href="/docs/quickstart">
+    Get up and running fast.
+  </Card>
+</Cards>
+
+## Tabs
+
+<Tabs items={["npm", "pnpm", "bun"]}>
+  <Tab value="npm">
+    ```bash
+    npm install cmdocs
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm add cmdocs
+    ```
+  </Tab>
+  <Tab value="bun">
+    ```bash
+    bun add cmdocs
+    ```
+  </Tab>
+</Tabs>
+
+## Steps
+
+<Steps>
+  <Step>
+    ### Install cmdocs
+    Run `npm install -g cmdocs`
+  </Step>
+  <Step>
+    ### Create a project
+    Run `cmdocs init my-docs`
+  </Step>
+  <Step>
+    ### Start developing
+    Run `cmdocs dev`
+  </Step>
+</Steps>
+
+## Accordion
+
+<Accordions>
+  <Accordion title="What is cmdocs?">
+    cmdocs is a developer documentation platform powered by Fumadocs.
+  </Accordion>
+  <Accordion title="How do I customize the theme?">
+    Edit the `theme` section in your `docs.json` configuration file.
+  </Accordion>
+</Accordions>
