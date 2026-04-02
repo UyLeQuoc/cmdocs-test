@@ -1,0 +1,66 @@
+{
+  "$schema": "https://cmdocs.dev/schema/docs.json",
+  "name": "cmdocs",
+  "description": "Self-hosted documentation platform powered by Fumadocs",
+  "favicon": "/public/favicon.svg",
+  "seo": {
+    "title": "cmdocs Documentation",
+    "titleTemplate": "%s — cmdocs",
+    "description": "Build beautiful, self-hosted documentation sites from MDX content with zero effort."
+  },
+  "theme": {
+    "colors": {
+      "primary": "#2563EB"
+    },
+    "darkMode": true,
+    "breadcrumb": true,
+    "lastUpdated": true
+  },
+  "navbar": {
+    "title": "cmdocs",
+    "github": "https://github.com/CommandOSSLabs/cmdocs",
+    "links": [
+      { "text": "Dashboard", "href": "https://cmdocs.dev" }
+    ]
+  },
+  "footer": {
+    "text": "Built with cmdocs",
+    "copyright": "© 2026 CommandOSS Labs"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["index", "quickstart", "installation"]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "configuration/docs-json",
+              "configuration/theme",
+              "configuration/navigation"
+            ]
+          },
+          {
+            "group": "Writing Content",
+            "pages": [
+              "content/mdx-basics",
+              "content/components",
+              "content/frontmatter"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/overview",
+              "deployment/self-hosted"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+---
+title: Quickstart
+description: Get a cmdocs documentation site running in under 2 minutes.
+---
+
+# Quickstart
+
+Get your first documentation site up and running with three commands.
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org) 18+ or [Bun](https://bun.sh) installed
+- A terminal
+
+## Create Your Project
+
+<Steps>
+  <Step>
+    **Initialize a new project**
+
+    ```bash
+    npx cmdocs init my-docs
+    ```
+
+    This creates a `my-docs/` directory with:
+    - `docs.json` — Site configuration
+    - MDX files — Example documentation pages
+    - `public/` — Static assets (favicon, images)
+  </Step>
+  <Step>
+    **Start the dev server**
+
+    ```bash
+    cd my-docs
+    npx cmdocs dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) in your browser. You should see your documentation site with hot-reload enabled.
+  </Step>
+  <Step>
+    **Edit your content**
+
+    Open `index.mdx` in your editor and make a change. The browser will update automatically.
+
+    Edit `docs.json` to customize your site name, colors, and navigation structure.
+  </Step>
+</Steps>
+
+## What's Next?
+
+<Cards>
+  <Card title="Configuration" description="Learn about docs.json and all available options." href="/docs/configuration/docs-json" />
+  <Card title="Writing Content" description="Learn MDX basics and available components." href="/docs/content/mdx-basics" />
+  <Card title="Deployment" description="Deploy your site to production." href="/docs/deployment/overview" />
+</Cards>
