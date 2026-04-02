@@ -18,11 +18,23 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "quickstart"]
+            "pages": [
+              "index",
+              "quickstart"
+            ]
           },
           {
             "group": "Guides",
-            "pages": ["guides/writing-content", "guides/components"]
+            "pages": [
+              "guides/writing-content",
+              "guides/components"
+            ]
+          },
+          {
+            "group": "Install",
+            "pages": [
+              "installation"
+            ]
           }
         ]
       }
