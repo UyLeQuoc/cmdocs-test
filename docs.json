@@ -49,7 +49,8 @@
             "pages": [
               "content/mdx-basics",
               "content/components",
-              "content/frontmatter"
+              "content/frontmatter",
+              "content/design-system"
             ]
           },
           {
