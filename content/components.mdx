@@ -1,0 +1,186 @@
+---
+title: Components
+description: All available UI components for your documentation pages.
+---
+
+# Components
+
+cmdocs automatically imports [Fumadocs UI](https://fumadocs.dev) components. Just use them in your MDX files — no import statements needed.
+
+## Callout
+
+Highlight important information with callouts:
+
+<Callout type="info">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warn">
+  This is a warning callout.
+</Callout>
+
+<Callout type="error">
+  This is an error/danger callout.
+</Callout>
+
+```mdx
+<Callout type="info">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warn">
+  This is a warning callout.
+</Callout>
+
+<Callout type="error">
+  This is an error/danger callout.
+</Callout>
+```
+
+## Cards
+
+Display linked content in card grids:
+
+<Cards>
+  <Card title="Getting Started" description="Learn the basics of cmdocs." />
+  <Card title="Configuration" description="Customize your documentation site." />
+</Cards>
+
+```mdx
+<Cards>
+  <Card title="Getting Started" description="Learn the basics." />
+  <Card title="Configuration" description="Customize your site." />
+</Cards>
+```
+
+## Tabs
+
+Organize content into switchable tabs:
+
+<Tabs items={["npm", "bun", "pnpm"]}>
+  <Tab value="npm">
+    ```bash
+    npm install cmdocs
+    ```
+  </Tab>
+  <Tab value="bun">
+    ```bash
+    bun add cmdocs
+    ```
+  </Tab>
+  <Tab value="pnpm">
+    ```bash
+    pnpm add cmdocs
+    ```
+  </Tab>
+</Tabs>
+
+```mdx
+<Tabs items={["npm", "bun", "pnpm"]}>
+  <Tab value="npm">npm install cmdocs</Tab>
+  <Tab value="bun">bun add cmdocs</Tab>
+  <Tab value="pnpm">pnpm add cmdocs</Tab>
+</Tabs>
+```
+
+## Steps
+
+Create numbered step-by-step instructions:
+
+<Steps>
+  <Step>
+    **Install cmdocs** — Run the install command for your package manager.
+  </Step>
+  <Step>
+    **Initialize project** — Run `cmdocs init` to create your docs.
+  </Step>
+  <Step>
+    **Start writing** — Open your MDX files and begin documenting.
+  </Step>
+</Steps>
+
+```mdx
+<Steps>
+  <Step>Install cmdocs</Step>
+  <Step>Initialize project</Step>
+  <Step>Start writing</Step>
+</Steps>
+```
+
+## Accordion
+
+Collapsible content sections:
+
+<Accordions>
+  <Accordion title="What is cmdocs?">
+    cmdocs is a self-hosted documentation platform powered by Fumadocs and Next.js.
+  </Accordion>
+  <Accordion title="Is it free?">
+    Yes! cmdocs is open-source and free to use.
+  </Accordion>
+</Accordions>
+
+```mdx
+<Accordions>
+  <Accordion title="What is cmdocs?">
+    cmdocs is a self-hosted documentation platform.
+  </Accordion>
+  <Accordion title="Is it free?">
+    Yes! cmdocs is open-source and free to use.
+  </Accordion>
+</Accordions>
+```
+
+## Files
+
+Display file tree structures:
+
+<Files>
+  <Folder name="my-docs" defaultOpen>
+    <File name="docs.json" />
+    <File name="index.mdx" />
+    <File name="quickstart.mdx" />
+    <Folder name="guides">
+      <File name="setup.mdx" />
+      <File name="advanced.mdx" />
+    </Folder>
+    <Folder name="public">
+      <File name="favicon.svg" />
+    </Folder>
+  </Folder>
+</Files>
+
+```mdx
+<Files>
+  <Folder name="my-docs" defaultOpen>
+    <File name="docs.json" />
+    <File name="index.mdx" />
+    <Folder name="guides">
+      <File name="setup.mdx" />
+    </Folder>
+  </Folder>
+</Files>
+```
+
+## TypeTable
+
+Display typed property tables:
+
+```mdx
+<TypeTable
+  type={{
+    name: { description: "Site name", type: "string", required: true },
+    theme: { description: "Theme configuration", type: "ThemeConfig" },
+  }}
+/>
+```
+
+## Banner
+
+Display a site-wide banner message:
+
+```mdx
+<Banner>
+  cmdocs v1.0 is now available! 🎉
+</Banner>
+```

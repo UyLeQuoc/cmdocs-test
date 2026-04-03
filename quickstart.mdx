@@ -1,57 +1,55 @@
 ---
 title: Quickstart
-description: Get up and running in minutes
+description: Get a cmdocs documentation site running in under 2 minutes.
 ---
 
 # Quickstart
 
-## Installation
+Get your first documentation site up and running with three commands.
 
-Install cmdocs globally:
+## Prerequisites
 
-```bash
-npm install -g cmdocs
-```
+- [Node.js](https://nodejs.org) 18+ or [Bun](https://bun.sh) installed
+- A terminal
 
-## Create a new project
+## Create Your Project
 
-```bash
-cmdocs init my-docs
-cd my-docs
-```
+<Steps>
+  <Step>
+    **Initialize a new project**
 
-## Start developing
+    ```bash
+    npx cmdocs init my-docs
+    ```
 
-```bash
-cmdocs dev
-```
+    This creates a `my-docs/` directory with:
+    - `docs.json` — Site configuration
+    - MDX files — Example documentation pages
+    - `public/` — Static assets (favicon, images)
+  </Step>
+  <Step>
+    **Start the dev server**
 
-Open [http://localhost:3000/docs](http://localhost:3000/docs) to see your docs.
+    ```bash
+    cd my-docs
+    npx cmdocs dev
+    ```
 
-## Build for production
+    Open [http://localhost:3000](http://localhost:3000) in your browser. You should see your documentation site with hot-reload enabled.
+  </Step>
+  <Step>
+    **Edit your content**
 
-```bash
-cmdocs build
-```
+    Open `index.mdx` in your editor and make a change. The browser will update automatically.
 
-The static site will be generated in the `out/` directory.
+    Edit `docs.json` to customize your site name, colors, and navigation structure.
+  </Step>
+</Steps>
 
-## Project Structure
+## What's Next?
 
-```
-my-docs/
-├── docs.json          # Configuration
-├── index.mdx          # Home page
-├── quickstart.mdx     # This page
-├── guides/
-│   ├── writing-content.mdx
-│   └── components.mdx
-└── public/
-    └── favicon.svg
-```
-
-## Next Steps
-
-- Edit `docs.json` to customize your site name, theme, and navigation
-- Add new pages by creating `.mdx` files
-- Use Fumadocs components like `Callout`, `Card`, `Tabs`, and more
+<Cards>
+  <Card title="Configuration" description="Learn about docs.json and all available options." href="/docs/configuration/docs-json" />
+  <Card title="Writing Content" description="Learn MDX basics and available components." href="/docs/content/mdx-basics" />
+  <Card title="Deployment" description="Deploy your site to production." href="/docs/deployment/overview" />
+</Cards>

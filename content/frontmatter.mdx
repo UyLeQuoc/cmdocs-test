@@ -1,0 +1,59 @@
+---
+title: Frontmatter Reference
+description: All supported frontmatter fields for your MDX pages.
+---
+
+# Frontmatter Reference
+
+Every MDX page starts with a YAML frontmatter block enclosed in `---` delimiters. These fields control page metadata and rendering.
+
+## Required Fields
+
+```yaml
+---
+title: Page Title
+---
+```
+
+<TypeTable
+  type={{
+    title: { description: "The page title displayed in the heading and sidebar", type: "string", required: true },
+  }}
+/>
+
+## Optional Fields
+
+```yaml
+---
+title: My Page
+description: A brief description of this page.
+icon: BookOpen
+---
+```
+
+<TypeTable
+  type={{
+    description: { description: "Page description for SEO meta tags and search results", type: "string" },
+    icon: { description: "Icon name displayed next to the page title in the sidebar", type: "string" },
+    full: { description: "Hide the table of contents and use full-width layout", type: "boolean", default: "false" },
+  }}
+/>
+
+## Example
+
+```yaml
+---
+title: Getting Started with cmdocs
+description: Learn how to install and configure cmdocs for your project.
+---
+
+# Getting Started with cmdocs
+
+Your content here...
+```
+
+## Notes
+
+- The `title` field is **required** on every page. If omitted, the pipeline will use the filename as a fallback.
+- The `description` field is used for the HTML `<meta>` description tag and search indexing.
+- All frontmatter fields are stripped from the rendered content — only the body content after the closing `---` is displayed.

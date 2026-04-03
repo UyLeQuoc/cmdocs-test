@@ -1,15 +1,31 @@
 {
   "$schema": "https://cmdocs.dev/schema/docs.json",
-  "name": "My Documentation",
-  "description": "Built with cmdocs",
+  "name": "cmdocs",
+  "description": "Self-hosted documentation platform powered by Fumadocs",
+  "favicon": "/public/favicon.svg",
+  "seo": {
+    "title": "cmdocs Documentation",
+    "titleTemplate": "%s — cmdocs",
+    "description": "Build beautiful, self-hosted documentation sites from MDX content with zero effort."
+  },
   "theme": {
     "colors": {
       "primary": "#2563EB"
-    }
+    },
+    "darkMode": true,
+    "breadcrumb": true,
+    "lastUpdated": true
   },
-  "seo": {
-    "title": "My Documentation",
-    "description": "Documentation built with cmdocs"
+  "navbar": {
+    "title": "cmdocs",
+    "github": "https://github.com/CommandOSSLabs/cmdocs",
+    "links": [
+      { "text": "Dashboard", "href": "https://cmdocs.dev" }
+    ]
+  },
+  "footer": {
+    "text": "Built with cmdocs",
+    "copyright": "© 2026 CommandOSS Labs"
   },
   "navigation": {
     "tabs": [
@@ -18,36 +34,33 @@
         "groups": [
           {
             "group": "Getting Started",
+            "pages": ["index", "quickstart", "installation"]
+          },
+          {
+            "group": "Configuration",
             "pages": [
-              "index",
-              "quickstart"
+              "configuration/docs-json",
+              "configuration/theme",
+              "configuration/navigation"
             ]
           },
           {
-            "group": "Guides",
+            "group": "Writing Content",
             "pages": [
-              "guides/writing-content",
-              "guides/components"
+              "content/mdx-basics",
+              "content/components",
+              "content/frontmatter"
             ]
           },
           {
-            "group": "Install",
+            "group": "Deployment",
             "pages": [
-              "installation"
+              "deployment/overview",
+              "deployment/self-hosted"
             ]
           }
         ]
       }
     ]
-  },
-  "navbar": {
-    "logo": {
-      "light": "/logo-light.svg",
-      "dark": "/logo-dark.svg"
-    },
-    "links": []
-  },
-  "footer": {
-    "copyright": "© 2025 My Company"
   }
 }
