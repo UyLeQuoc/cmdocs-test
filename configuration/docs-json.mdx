@@ -43,27 +43,29 @@ The `docs.json` file is the central configuration for your cmdocs site. It defin
 
 ### `navigation` (required)
 
-The navigation object defines the sidebar structure.
+The navigation object defines the sidebar structure and tab behavior.
 
-```json
-{
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Tab Name",
-        "groups": [
-          {
-            "group": "Group Label",
-            "pages": ["page-slug", "folder/page-slug"]
-          }
-        ]
-      }
-    ]
-  }
-}
-```
+<TypeTable
+  type={{
+    tabMode: { description: "Tab display mode", type: "'top' | 'auto'", default: "'auto'" },
+    tabs: { description: "Array of tab configurations", type: "NavigationTab[]", required: true },
+  }}
+/>
 
-See [Navigation Configuration](/docs/configuration/navigation) for details.
+#### Tab Fields
+
+<TypeTable
+  type={{
+    tab: { description: "Tab display name", type: "string", required: true },
+    description: { description: "Description shown in tab dropdown", type: "string" },
+    icon: { description: "Lucide icon name or emoji string", type: "string" },
+    url: { description: "Custom URL for the tab", type: "string" },
+    unlisted: { description: "Hide from tab list", type: "boolean", default: "false" },
+    groups: { description: "Navigation groups", type: "NavigationGroup[]", required: true },
+  }}
+/>
+
+See [Navigation Configuration](/configuration/navigation) for details.
 
 ### `theme`
 
@@ -83,7 +85,7 @@ See [Navigation Configuration](/docs/configuration/navigation) for details.
 }
 ```
 
-See [Theme Configuration](/docs/configuration/theme) for details.
+See [Theme Configuration](/configuration/theme) for details.
 
 ### `seo`
 
@@ -128,6 +130,19 @@ The `logo` field accepts either a string path or an object with `light` and `dar
   }
 }
 ```
+
+#### Link Types
+
+The `links` array supports 4 types of navigation items:
+
+| Type | Description | Example |
+|------|-------------|---------|
+| Default | Simple text link | `{ "text": "Blog", "href": "/blog" }` |
+| `"icon"` | Icon-only button | `{ "type": "icon", "text": "Discord", "href": "...", "icon": "MessageCircle" }` |
+| `"button"` | Styled button | `{ "type": "button", "text": "Get Started", "href": "/quickstart" }` |
+| `"menu"` | Dropdown menu | `{ "type": "menu", "text": "Resources", "items": [...] }` |
+
+See [Navigation Configuration](/configuration/navigation#navbar-links) for full details on each link type.
 
 ### `footer`
 

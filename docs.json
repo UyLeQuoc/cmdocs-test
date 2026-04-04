@@ -20,7 +20,39 @@
     "title": "cmdocs",
     "github": "https://github.com/CommandOSSLabs/cmdocs",
     "links": [
-      { "text": "Dashboard", "href": "https://cmdocs.dev" }
+      {
+        "text": "Dashboard",
+        "href": "https://cmdocs.dev",
+        "icon": "LayoutDashboard",
+        "active": "none",
+        "external": true
+      },
+      {
+        "type": "icon",
+        "text": "Discord",
+        "href": "https://discord.gg/cmdocs",
+        "icon": "MessageCircle",
+        "label": "Join our Discord",
+        "external": true
+      },
+      {
+        "type": "menu",
+        "text": "Resources",
+        "icon": "MoreHorizontal",
+        "items": [
+          {
+            "text": "Changelog",
+            "href": "https://cmdocs.dev/changelog",
+            "description": "See what's new in cmdocs"
+          },
+          {
+            "text": "Roadmap",
+            "href": "https://linear.app/commandoss",
+            "description": "View our public roadmap",
+            "external": true
+          }
+        ]
+      }
     ]
   },
   "footer": {
@@ -28,9 +60,12 @@
     "copyright": "© 2026 CommandOSS Labs"
   },
   "navigation": {
+    "tabMode": "auto",
     "tabs": [
       {
         "tab": "Documentation",
+        "description": "Learn how to build docs with cmdocs",
+        "icon": "BookOpen",
         "groups": [
           {
             "group": "Getting Started",
@@ -52,7 +87,14 @@
               "content/frontmatter",
               "content/design-system"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Deployment",
+        "description": "Deploy your documentation site",
+        "icon": "Rocket",
+        "groups": [
           {
             "group": "Deployment",
             "pages": [
