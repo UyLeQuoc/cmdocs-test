@@ -74,9 +74,13 @@
           {
             "group": "Configuration",
             "pages": [
-              "configuration/docs-json",
-              "configuration/theme",
-              "configuration/navigation"
+              "configuration-hehe/docs-json",
+              "configuration-hehe/theme",
+              "configuration-hehe/navigation",
+              "content/mdx-basics",
+              "content/components",
+              "content/frontmatter",
+              "content/design-system"
             ]
           },
           {
