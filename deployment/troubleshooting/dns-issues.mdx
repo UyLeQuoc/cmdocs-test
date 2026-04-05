@@ -1,0 +1,28 @@
+---
+title: DNS Issues
+description: Troubleshoot DNS configuration problems.
+---
+
+# DNS Issues
+
+Common DNS problems and solutions.
+
+## CNAME Not Resolving
+
+If your custom domain isn't working:
+
+1. Verify DNS propagation: `dig docs.yoursite.com CNAME`
+2. Check for conflicting A records
+3. DNS changes can take up to 48 hours
+
+## SSL Certificate Errors
+
+If HTTPS isn't working after DNS setup:
+
+- Ensure no CAA records are blocking Let's Encrypt
+- Wait 15-30 minutes for certificate provisioning
+- Check that the CNAME target is correct
+
+## Subdomain Conflicts
+
+Multiple subdomains (e.g., `docs.site.com` and `api.site.com`) are supported.

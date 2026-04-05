@@ -87,6 +87,21 @@
               "content/frontmatter",
               "content/design-system"
             ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/getting-started",
+              "guides/migration"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "advanced/custom-components",
+              "advanced/search",
+              "advanced/i18n"
+            ]
           }
         ]
       },
@@ -96,10 +111,25 @@
         "icon": "Rocket",
         "groups": [
           {
-            "group": "Deployment",
+            "group": "Overview",
             "pages": [
               "deployment/overview",
+              "deployment/github"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "deployment/custom-domains",
+              "deployment/environment-variables",
               "deployment/self-hosted"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "deployment/troubleshooting/build-errors",
+              "deployment/troubleshooting/dns-issues"
             ]
           }
         ]

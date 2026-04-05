@@ -1,0 +1,36 @@
+---
+title: Internationalization (i18n)
+description: Add multi-language support to your documentation site.
+---
+
+# Internationalization
+
+cmdocs supports internationalization through Fumadocs' built-in i18n system.
+
+## Setup
+
+Configure languages in your `docs.json`:
+
+```json
+{
+  "i18n": {
+    "defaultLocale": "en",
+    "locales": ["en", "vi", "ja"]
+  }
+}
+```
+
+## File Structure
+
+Create locale-specific content files:
+
+```
+docs/
+├── index.mdx          # English (default)
+├── index.vi.mdx       # Vietnamese
+├── index.ja.mdx       # Japanese
+```
+
+## Language Switcher
+
+The language switcher appears automatically in the navbar when multiple locales are configured.

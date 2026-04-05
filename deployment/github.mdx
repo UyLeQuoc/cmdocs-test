@@ -1,0 +1,36 @@
+---
+title: GitHub Integration
+description: Set up automatic deployments with GitHub webhooks.
+---
+
+# GitHub Integration
+
+cmdocs integrates with GitHub to provide automatic deployments on every push.
+
+## Setting Up
+
+1. Connect your GitHub account in the Dashboard
+2. Select the repository containing your docs
+3. Configure the target branch
+
+## Automatic Deployments
+
+Every push to the configured branch triggers:
+
+1. Repository clone
+2. Build pipeline execution
+3. Static site generation
+4. Deployment to your environment
+
+## Branch Management
+
+Each environment can track a different branch:
+
+| Environment | Branch | Purpose |
+|-------------|--------|---------|
+| Production  | `main`  | Live documentation |
+| Staging     | `dev`   | Preview changes |
+
+## Webhook Security
+
+Webhooks are secured with HMAC-SHA256 signatures to prevent unauthorized deployments.

@@ -1,0 +1,31 @@
+---
+title: Custom Domains
+description: Configure custom domains for your documentation site.
+---
+
+# Custom Domains
+
+Use your own domain for a professional documentation experience.
+
+## Setup
+
+1. Go to **Dashboard → Project → Settings → Domains**
+2. Add your custom domain (e.g., `docs.yourcompany.com`)
+3. Configure DNS: Add a CNAME record pointing to `cmdocs.commandoss.com`
+
+## DNS Configuration
+
+```
+Type: CNAME
+Name: docs
+Value: cmdocs.commandoss.com
+TTL: 3600
+```
+
+## SSL Certificates
+
+SSL certificates are automatically provisioned via Let's Encrypt once DNS propagation is complete.
+
+## Verification
+
+After DNS setup, verification typically takes 5-10 minutes.

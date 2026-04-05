@@ -1,0 +1,32 @@
+---
+title: Migration Guide
+description: Migrate from other documentation platforms to cmdocs.
+---
+
+# Migration Guide
+
+Moving your existing documentation to cmdocs is straightforward.
+
+## From Mintlify
+
+1. Export your pages as MDX files
+2. Create a `docs.json` mapping your navigation structure
+3. Update internal links to use relative paths
+
+## From Docusaurus
+
+1. Copy your `docs/` directory
+2. Convert `sidebars.js` navigation to `docs.json` format
+3. Replace Docusaurus-specific components with Fumadocs equivalents
+
+## From GitBook
+
+1. Export your content as Markdown
+2. Add frontmatter headers to each file
+3. Set up your `docs.json` navigation
+
+## Common Considerations
+
+- **Images**: Place in `public/` and use absolute paths
+- **Links**: Use relative paths between documentation pages
+- **Components**: Replace platform-specific components with Fumadocs equivalents
