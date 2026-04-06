@@ -9,7 +9,7 @@
     "description": "Build beautiful, self-hosted documentation sites from MDX content with zero effort."
   },
   "theme": {
-    "preset": "ocean",
+    "preset": "neutral",
     "colors": {
       "primary": "#2563EB"
     },
