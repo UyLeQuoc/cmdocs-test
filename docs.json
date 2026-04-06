@@ -24,6 +24,7 @@
       {
         "text": "GitHub",
         "href": "https://github.com/MystenLabs/MemWal",
+        "icon": "Github",
         "external": true
       }
     ]
@@ -38,6 +39,7 @@
     "tabs": [
       {
         "tab": "Get Started",
+        "icon": "Rocket",
         "groups": [
           {
             "group": "Getting Started",
@@ -51,6 +53,7 @@
       },
       {
         "tab": "Fundamentals",
+        "icon": "BookOpen",
         "groups": [
           {
             "group": "Concepts",
@@ -71,6 +74,7 @@
       },
       {
         "tab": "SDK",
+        "icon": "Code",
         "groups": [
           {
             "group": "SDK",
@@ -92,6 +96,7 @@
       },
       {
         "tab": "Relayer",
+        "icon": "Network",
         "groups": [
           {
             "group": "Relayer",
@@ -106,6 +111,7 @@
       },
       {
         "tab": "Contract",
+        "icon": "FileCode",
         "groups": [
           {
             "group": "Smart Contract",
@@ -119,6 +125,7 @@
       },
       {
         "tab": "Indexer",
+        "icon": "Database",
         "groups": [
           {
             "group": "Indexer",
@@ -132,6 +139,7 @@
       },
       {
         "tab": "NemoClaw/OpenClaw Plugin",
+        "icon": "Puzzle",
         "groups": [
           {
             "group": "NemoClaw/OpenClaw Plugin",
@@ -147,6 +155,7 @@
       },
       {
         "tab": "Reference",
+        "icon": "BookMarked",
         "groups": [
           {
             "group": "Reference",
@@ -159,6 +168,7 @@
       },
       {
         "tab": "Contributing",
+        "icon": "GitPullRequest",
         "groups": [
           {
             "group": "Contributing",
