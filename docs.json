@@ -9,6 +9,7 @@
     "description": "Build beautiful, self-hosted documentation sites from MDX content with zero effort."
   },
   "theme": {
+    "preset": "ocean",
     "colors": {
       "primary": "#2563EB"
     },
@@ -69,18 +70,18 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "quickstart", "installation"]
+            "pages": [
+              "index",
+              "quickstart",
+              "installation"
+            ]
           },
           {
             "group": "Configuration",
             "pages": [
-              "configuration-hehe/docs-json",
-              "configuration-hehe/theme",
-              "configuration-hehe/navigation",
-              "content/mdx-basics",
-              "content/components",
-              "content/frontmatter",
-              "content/design-system"
+              "configuration/docs-json",
+              "configuration/theme",
+              "configuration/navigation"
             ]
           },
           {
