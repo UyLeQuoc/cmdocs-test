@@ -10,12 +10,8 @@
   },
   "theme": {
     "preset": "emerald",
-    "colors": {
-      "primary": "#191a23",
-      "light": "#E8FF75",
-      "dark": "#191a23"
-    },
-    "darkMode": true
+    "darkMode": true,
+    "breadcrumb": true
   },
   "navbar": {
     "title": "MemWal",
@@ -38,6 +34,7 @@
     }
   },
   "navigation": {
+    "tabMode": "auto",
     "tabs": [
       {
         "tab": "Get Started",
