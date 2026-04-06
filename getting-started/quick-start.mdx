@@ -14,23 +14,23 @@ The fastest way to get MemWal running is through the TypeScript SDK.
   <Step>
     ### Install the SDK
 
-    <Tabs>
-      <Tab title="pnpm">
+    <Tabs items={["pnpm", "npm", "yarn", "bun"]}>
+      <Tab value="pnpm">
         ```bash
         pnpm add @mysten-incubation/memwal
         ```
       </Tab>
-      <Tab title="npm">
+      <Tab value="npm">
         ```bash
         npm install @mysten-incubation/memwal
         ```
       </Tab>
-      <Tab title="yarn">
+      <Tab value="yarn">
         ```bash
         yarn add @mysten-incubation/memwal
         ```
       </Tab>
-      <Tab title="bun">
+      <Tab value="bun">
         ```bash
         bun add @mysten-incubation/memwal
         ```
@@ -41,23 +41,23 @@ The fastest way to get MemWal running is through the TypeScript SDK.
 
     For AI middleware with [Vercel AI SDK](https://sdk.vercel.ai/) (`@mysten-incubation/memwal/ai`):
 
-    <Tabs>
-      <Tab title="pnpm">
+    <Tabs items={["pnpm", "npm", "yarn", "bun"]}>
+      <Tab value="pnpm">
         ```bash
         pnpm add ai
         ```
       </Tab>
-      <Tab title="npm">
+      <Tab value="npm">
         ```bash
         npm install ai
         ```
       </Tab>
-      <Tab title="yarn">
+      <Tab value="yarn">
         ```bash
         yarn add ai
         ```
       </Tab>
-      <Tab title="bun">
+      <Tab value="bun">
         ```bash
         bun add ai
         ```
@@ -66,23 +66,23 @@ The fastest way to get MemWal running is through the TypeScript SDK.
 
     For the [manual client flow](/getting-started/choose-your-path) (`@mysten-incubation/memwal/manual`):
 
-    <Tabs>
-      <Tab title="pnpm">
+    <Tabs items={["pnpm", "npm", "yarn", "bun"]}>
+      <Tab value="pnpm">
         ```bash
         pnpm add @mysten/sui @mysten/seal @mysten/walrus
         ```
       </Tab>
-      <Tab title="npm">
+      <Tab value="npm">
         ```bash
         npm install @mysten/sui @mysten/seal @mysten/walrus
         ```
       </Tab>
-      <Tab title="yarn">
+      <Tab value="yarn">
         ```bash
         yarn add @mysten/sui @mysten/seal @mysten/walrus
         ```
       </Tab>
-      <Tab title="bun">
+      <Tab value="bun">
         ```bash
         bun add @mysten/sui @mysten/seal @mysten/walrus
         ```
@@ -95,9 +95,9 @@ The fastest way to get MemWal running is through the TypeScript SDK.
 
     Create a MemWal account ID and delegate private key for your SDK client using one of the hosted endpoints below.
 
-    <Note>
+    <Callout>
     The following endpoints are provided as a public good by Walrus Foundation.
-    </Note>
+    </Callout>
 
     | App | URL |
     | --- | --- |
@@ -112,9 +112,9 @@ The fastest way to get MemWal running is through the TypeScript SDK.
 
     Use a hosted relayer, or deploy your own [self-hosted relayer](/relayer/self-hosting) with access to a wallet funded with WAL and SUI:
 
-    <Note>
+    <Callout>
     Following endpoints are provided as public good by Walrus Foundation.
-    </Note>
+    </Callout>
 
     | Network | Relayer URL |
     | --- | --- |

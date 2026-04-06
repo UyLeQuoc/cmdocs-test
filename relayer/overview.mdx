@@ -65,9 +65,9 @@ For the `analyze` endpoint (which stores multiple facts concurrently), the relay
 
 Each relayer deployment is tied to a single MemWal package ID (`MEMWAL_PACKAGE_ID`). The package ID is used for SEAL encryption key derivation and Walrus blob metadata. Queries in the vector database are scoped by `owner + namespace`, while the package ID provides cross-deployment isolation at the encryption layer.
 
-<Note>
+<Callout>
 The current relayer does not support multi-tenancy across multiple package IDs. If you deploy a separate MemWal contract, you need to run a separate relayer instance with its own database.
-</Note>
+</Callout>
 
 ## Trust Boundary
 

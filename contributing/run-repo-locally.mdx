@@ -11,9 +11,9 @@ description: "Step-by-step guide to set up the MemWal monorepo for local develop
 | **pnpm** | ≥ 9.12 | `pnpm -v` |
 | **Rust** | latest stable (only for backend services) | `rustc --version` |
 
-<Tip>
+<Callout>
 If you only work on TypeScript apps or docs, you don't need Rust.
-</Tip>
+</Callout>
 
 ## Step 1 — Clone and Install
 
@@ -25,9 +25,9 @@ pnpm install
 
 ## Step 2 — Build the SDK First
 
-<Warning>
+<Callout type="warn">
 The apps depend on the SDK's compiled output. If you skip this step, apps will fail to start with import errors.
-</Warning>
+</Callout>
 
 ```bash
 pnpm build:sdk

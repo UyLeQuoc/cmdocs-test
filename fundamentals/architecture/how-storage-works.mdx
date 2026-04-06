@@ -78,9 +78,9 @@ sequenceDiagram
 4. Each blob is decrypted via SEAL using the delegate key
 5. Plaintext results are returned to your app, sorted by distance (most relevant first)
 
-<Note>
+<Callout>
 If a blob has expired on Walrus (returns 404), the relayer automatically deletes the stale vector entry from the database. This reactive cleanup keeps your recall results clean without manual intervention.
-</Note>
+</Callout>
 
 ## Restoring a memory space
 

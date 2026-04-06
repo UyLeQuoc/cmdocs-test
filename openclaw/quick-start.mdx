@@ -42,9 +42,9 @@ You'll also need a **delegate key**, **account ID**, and **relayer URL** from Me
     | **Production** (mainnet) | `https://relayer.memwal.ai` |
     | **Development** (testnet) | `https://relayer.dev.memwal.ai` |
 
-    <Info>
+    <Callout>
     These managed relayer endpoints are provided as a public good by Walrus Foundation.
-    </Info>
+    </Callout>
   </Step>
 
   <Step>
@@ -81,7 +81,8 @@ You'll also need a **delegate key**, **account ID**, and **relayer URL** from Me
     }
     ```
 
-    <Accordion title="Optional settings">
+    <Accordions>
+<Accordion title="Optional settings">
       You can add these to the `config` block to tune behavior. The defaults work well for most setups.
 
       | Option | Default | Description |
@@ -93,6 +94,7 @@ You'll also need a **delegate key**, **account ID**, and **relayer URL** from Me
       | `captureMaxMessages` | `10` | How many recent messages to analyze for facts |
       | `defaultNamespace` | `"default"` | Memory scope for the main agent |
     </Accordion>
+</Accordions>
   </Step>
 
   <Step>
@@ -109,9 +111,9 @@ You'll also need a **delegate key**, **account ID**, and **relayer URL** from Me
     oc-memwal: connected (status: ok, version: ...)
     ```
 
-    <Tip>
+    <Callout>
     If you see `health check failed`, check that your relayer URL is reachable and your `MEMWAL_PRIVATE_KEY` env var is set.
-    </Tip>
+    </Callout>
   </Step>
 </Steps>
 
