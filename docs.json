@@ -9,7 +9,7 @@
     "description": "Privacy-preserving decentralized memory protocol for humans and AI agents"
   },
   "theme": {
-    "preset": "neutral",
+    "preset": "emerald",
     "colors": {
       "primary": "#191a23",
       "light": "#E8FF75",
