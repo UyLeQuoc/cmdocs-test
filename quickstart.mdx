@@ -1,55 +1,227 @@
 ---
 title: Quickstart
-description: Get a cmdocs documentation site running in under 2 minutes.
+description: Build your first Next.js pages in under 5 minutes.
 ---
 
 # Quickstart
 
-Get your first documentation site up and running with three commands.
+By the end of this page you'll have created multiple pages, added navigation, fetched data, and styled your app.
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org) 18+ or [Bun](https://bun.sh) installed
-- A terminal
+- A Next.js project (see [Installation](/documentation/installation))
+- Your dev server running on `http://localhost:3000`
 
-## Create Your Project
+## 1. Create your first page
+
+Every file inside `app/` that exports a default React component becomes a route.
 
 <Steps>
   <Step>
-    **Initialize a new project**
+    ### Edit the home page
 
-    ```bash
-    npx cmdocs init my-docs
+    Open `app/page.tsx` and replace its content:
+
+    ```tsx title="app/page.tsx"
+    export default function Home() {
+      return (
+        <main>
+          <h1>Welcome to my app</h1>
+          <p>Built with Next.js 15</p>
+        </main>
+      )
+    }
     ```
 
-    This creates a `my-docs/` directory with:
-    - `docs.json` — Site configuration
-    - MDX files — Example documentation pages
-    - `public/` — Static assets (favicon, images)
+    Save the file. The browser auto-refreshes with your changes.
   </Step>
   <Step>
-    **Start the dev server**
+    ### Add a second page
 
-    ```bash
-    cd my-docs
-    npx cmdocs dev
+    Create a new file at `app/about/page.tsx`:
+
+    ```tsx title="app/about/page.tsx"
+    export default function About() {
+      return (
+        <main>
+          <h1>About</h1>
+          <p>This is the about page.</p>
+        </main>
+      )
+    }
     ```
 
-    Open [http://localhost:3000](http://localhost:3000) in your browser. You should see your documentation site with hot-reload enabled.
+    Navigate to [http://localhost:3000/about](http://localhost:3000/about) to see it.
+
+    <Callout type="info">
+      The folder name becomes the URL segment. `app/about/page.tsx` → `/about`.
+    </Callout>
   </Step>
   <Step>
-    **Edit your content**
+    ### Add navigation
 
-    Open `index.mdx` in your editor and make a change. The browser will update automatically.
+    Update your layout to include links between pages:
 
-    Edit `docs.json` to customize your site name, colors, and navigation structure.
+    ```tsx title="app/layout.tsx"
+    import Link from 'next/link'
+
+    export default function RootLayout({
+      children,
+    }: {
+      children: React.ReactNode
+    }) {
+      return (
+        <html lang="en">
+          <body>
+            <nav>
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+            </nav>
+            {children}
+          </body>
+        </html>
+      )
+    }
+    ```
+
+    <Callout type="warn">
+      Always use `next/link` instead of `<a>` tags for internal navigation. It enables client-side transitions and prefetching.
+    </Callout>
   </Step>
 </Steps>
 
-## What's Next?
+## 2. Fetch data
+
+Server Components can be `async` — you can `await` data directly in your component.
+
+```tsx title="app/posts/page.tsx"
+interface Post {
+  id: number
+  title: string
+  body: string
+}
+
+export default async function Posts() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
+  const posts: Post[] = await res.json()
+
+  return (
+    <main>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </main>
+  )
+}
+```
+
+<Callout type="info">
+  This `fetch` runs on the **server** at request time. The data is already rendered in the HTML sent to the browser — no loading spinner needed.
+</Callout>
+
+## 3. Add styling
+
+Next.js supports multiple styling approaches out of the box:
+
+<Tabs items={["CSS Modules", "Tailwind CSS", "Global CSS"]}>
+  <Tab value="CSS Modules">
+    ```css title="app/page.module.css"
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    ```
+
+    ```tsx title="app/page.tsx"
+    import styles from './page.module.css'
+
+    export default function Home() {
+      return (
+        <main className={styles.hero}>
+          <h1 className={styles.title}>Welcome</h1>
+        </main>
+      )
+    }
+    ```
+  </Tab>
+  <Tab value="Tailwind CSS">
+    If you selected Tailwind during `create-next-app`, it's already configured:
+
+    ```tsx title="app/page.tsx"
+    export default function Home() {
+      return (
+        <main className="flex min-h-screen flex-col items-center justify-center p-24">
+          <h1 className="text-5xl font-bold">Welcome</h1>
+        </main>
+      )
+    }
+    ```
+  </Tab>
+  <Tab value="Global CSS">
+    Import your global stylesheet in the root layout:
+
+    ```css title="app/globals.css"
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+    ```
+
+    ```tsx title="app/layout.tsx"
+    import './globals.css'
+
+    export default function RootLayout({ children }) {
+      return (
+        <html lang="en">
+          <body>{children}</body>
+        </html>
+      )
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Your project so far
+
+<Files>
+  <Folder name="my-app" defaultOpen>
+    <Folder name="app" defaultOpen>
+      <File name="layout.tsx" />
+      <File name="page.tsx" />
+      <File name="page.module.css" />
+      <File name="globals.css" />
+      <Folder name="about" defaultOpen>
+        <File name="page.tsx" />
+      </Folder>
+      <Folder name="posts" defaultOpen>
+        <File name="page.tsx" />
+      </Folder>
+    </Folder>
+  </Folder>
+</Files>
+
+## What's next
 
 <Cards>
-  <Card title="Configuration" description="Learn about docs.json and all available options." href="/docs/configuration/docs-json" />
-  <Card title="Writing Content" description="Learn MDX basics and available components." href="/docs/content/mdx-basics" />
-  <Card title="Deployment" description="Deploy your site to production." href="/docs/deployment/overview" />
+  <Card title="Pages and Layouts" description="Understand how routing works in the App Router." href="/documentation/routing/pages-and-layouts" icon="Layout" />
+  <Card title="Dynamic Routes" description="Create routes with parameters like /posts/[id]." href="/documentation/routing/dynamic-routes" icon="Route" />
+  <Card title="Data Fetching" description="Server vs. client rendering, and when to use each." href="/documentation/data-fetching/overview" icon="Database" />
+  <Card title="Styling" description="CSS Modules, Tailwind, and other approaches." href="/documentation/styling/overview" icon="Palette" />
 </Cards>

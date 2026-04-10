@@ -1,39 +1,42 @@
 {
-  "$schema": "https://cmdocs.dev/schema/docs.json",
-  "name": "cmdocs",
-  "description": "Self-hosted documentation platform powered by Fumadocs",
-  "favicon": "/public/favicon.svg",
+  "$schema": "https://dev.cmdocs.sh/schema/docs.json",
+  "name": "Next.js",
+  "description": "The React framework for production — build full-stack web applications with ease",
+  "favicon": "/favicon.svg",
   "seo": {
-    "title": "cmdocs Documentation",
-    "titleTemplate": "%s — cmdocs",
-    "description": "Build beautiful, self-hosted documentation sites from MDX content with zero effort."
+    "title": "Next.js Documentation",
+    "titleTemplate": "%s — Next.js Docs",
+    "description": "Learn how to build full-stack web applications with Next.js, the React framework for production.",
+    "ogImage": "https://nextjs.org/api/docs-og"
   },
   "theme": {
-    "preset": "neutral",
-    "colors": {
-      "primary": "#2563EB"
-    },
+    "preset": "ocean",
     "darkMode": true,
     "breadcrumb": true,
     "lastUpdated": true
   },
   "navbar": {
-    "title": "cmdocs",
-    "github": "https://github.com/CommandOSSLabs/cmdocs",
+    "title": "Next.js",
+    "logo": {
+      "light": "/logo-light.svg",
+      "dark": "/logo-dark.svg",
+      "display": "brand-name-and-logo"
+    },
+    "github": "https://github.com/vercel/next.js",
     "links": [
       {
-        "text": "Dashboard",
-        "href": "https://cmdocs.dev",
-        "icon": "LayoutDashboard",
+        "text": "Learn",
+        "href": "https://nextjs.org/learn",
+        "icon": "GraduationCap",
         "active": "none",
         "external": true
       },
       {
         "type": "icon",
-        "text": "Discord",
-        "href": "https://discord.gg/cmdocs",
-        "icon": "MessageCircle",
-        "label": "Join our Discord",
+        "text": "X",
+        "href": "https://x.com/nextjs",
+        "icon": "X",
+        "label": "Follow on X",
         "external": true
       },
       {
@@ -42,14 +45,15 @@
         "icon": "MoreHorizontal",
         "items": [
           {
-            "text": "Changelog",
-            "href": "https://cmdocs.dev/changelog",
-            "description": "See what's new in cmdocs"
+            "text": "Showcase",
+            "href": "https://nextjs.org/showcase",
+            "description": "Built with Next.js",
+            "external": true
           },
           {
-            "text": "Roadmap",
-            "href": "https://linear.app/commandoss",
-            "description": "View our public roadmap",
+            "text": "Blog",
+            "href": "https://nextjs.org/blog",
+            "description": "Latest news and updates",
             "external": true
           }
         ]
@@ -58,83 +62,71 @@
   },
   "footer": {
     "text": "Built with cmdocs",
-    "copyright": "© 2026 CommandOSS Labs"
+    "copyright": "© 2026 Vercel, Inc."
   },
   "navigation": {
     "tabMode": "auto",
     "tabs": [
       {
         "tab": "Documentation",
-        "description": "Learn how to build docs with cmdocs",
+        "description": "Learn how to build with Next.js",
         "icon": "BookOpen",
         "groups": [
           {
             "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "installation"
+              "installation",
+              "quickstart"
             ]
           },
           {
-            "group": "Configuration",
+            "group": "Routing",
             "pages": [
-              "configuration/docs-json",
-              "configuration/theme",
-              "configuration/navigation"
+              "routing/pages-and-layouts",
+              "routing/dynamic-routes",
+              "routing/middleware"
             ]
           },
           {
-            "group": "Writing Content",
+            "group": "Data Fetching",
             "pages": [
-              "content/mdx-basics",
-              "content/components",
-              "content/frontmatter",
-              "content/design-system"
+              "data-fetching/overview",
+              "data-fetching/caching"
             ]
           },
           {
-            "group": "Guides",
+            "group": "Styling",
             "pages": [
-              "guides/getting-started",
-              "guides/migration"
+              "styling/overview"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "description": "Configuration, route handlers, and utilities",
+        "icon": "Code",
+        "groups": [
           {
-            "group": "Advanced",
+            "group": "API",
             "pages": [
-              "advanced/custom-components",
-              "advanced/search",
-              "advanced/i18n"
+              "api/route-handlers",
+              "api/configuration"
             ]
           }
         ]
       },
       {
         "tab": "Deployment",
-        "description": "Deploy your documentation site",
+        "description": "Deploy your Next.js application",
         "icon": "Rocket",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Deployment",
             "pages": [
               "deployment/overview",
-              "deployment/github"
-            ]
-          },
-          {
-            "group": "Configuration",
-            "pages": [
-              "deployment/custom-domains",
-              "deployment/environment-variables",
-              "deployment/self-hosted"
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "pages": [
-              "deployment/troubleshooting/build-errors",
-              "deployment/troubleshooting/dns-issues"
+              "deployment/docker"
             ]
           }
         ]
